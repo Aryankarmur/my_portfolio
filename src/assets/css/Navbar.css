@@ -1,0 +1,123 @@
+nav {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* gap: 1rem; */
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+nav .main {
+  padding: 1rem 3rem;
+  width: 100%;
+  max-width: 1366px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+}
+
+nav .main .logo {
+  font-size: 1.3rem;
+  background: linear-gradient(to right, #60a5fa, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+nav .main .navlinks {
+  display: flex;
+  gap: 1rem;
+}
+
+nav .main .navlinks button {
+  border: none;
+  border-radius: 5px;
+  background: transparent;
+  font-size: 1.2rem;
+  color: #fffefe;
+  cursor: pointer;
+}
+
+nav .main .menu {
+  display: none;
+  cursor: pointer;
+  transition: all 3s ease-in;
+}
+
+nav .responsivlinks {
+  width: 100%;
+  height: 194px;
+  /* padding: 1rem; */
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.7rem;
+  background-color: #2f223fda;
+  transition: all 1s ease-out;
+  overflow: hidden;
+}
+nav .none {
+  width: 100%;
+  height: 0px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  visibility: hidden;
+  gap: 1rem;
+  background-color: #a0979749;
+  transition: all 1s ease-in;
+  overflow: hidden;
+}
+nav .none button {
+  display: none;
+}
+
+nav .responsivlinks button,
+nav .none button {
+  border: none;
+  border-radius: 5px;
+  background: transparent;
+  font-size: 1.2rem;
+  color: #cfcfcf;
+  cursor: pointer;
+}
+
+/*  ==  start  responsive part ==  */
+
+@media (max-width: 760px) {
+  nav .main {
+    height: 47px;
+    background-color: #4e49495d;
+    padding-bottom: 0.5rem;
+    padding-top: 0;
+  }
+  nav .main .menu {
+    display: grid;
+    place-items: center;
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+    font-size: 2rem;
+  }
+  nav .main .navlinks {
+    display: none;
+  }
+  nav .responsivlinks {
+    display: flex;
+  }
+}
+
+@media (max-width: 450px) {
+  nav .main {
+    padding: 0rem 1.7rem;
+  }
+}
+
+/*  ==  end  responsive part ==  */

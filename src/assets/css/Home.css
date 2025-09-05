@@ -1,0 +1,244 @@
+#home-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    to bottom right,
+    #100f52e8,
+    #25194ee8,
+    #34174ee8,
+    #340142b7
+  );
+}
+#home {
+  height: 100vh;
+  max-width: 1366px;
+  padding: 4.65rem 1rem 0rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+}
+
+/* content part */
+
+#home .content {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 5rem;
+}
+#home .content h1 {
+  font-size: 4rem;
+  color: #ffffff;
+}
+#home .content h1 span {
+  background: linear-gradient(to right, #2d2dfcfb, #ff009d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#home .content p {
+  font-size: 2rem;
+  color: #cfcfcf;
+}
+#home .content .btn {
+  display: flex;
+  gap: 1rem;
+}
+#home .content .btn button {
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  font-size: 1.02rem;
+  font-weight: 700;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  letter-spacing: 0.8px;
+}
+#home .content .btn .btn1 {
+  background: linear-gradient(to right, #4f28ff, #ab19ff);
+  color: #ffffff;
+  border: none;
+}
+#home .content .btn .btn1:hover {
+  box-shadow: 0 8px 30px 3px #7f2aee;
+}
+#home .content .btn .btn2 {
+  color: #b153ff;
+  background: transparent;
+  border: 2px solid #b153ff;
+}
+#home .content .btn .btn2:hover {
+  background-color: #b153ff;
+  color: #ffffff;
+}
+#home .content .icon {
+  display: flex;
+  gap: 1rem;
+}
+#home .content .icon a {
+  font-size: 1.8rem;
+  color: #cfcfcf;
+}
+
+#home .content .down {
+  color: #ffff;
+  z-index: 10;
+  position: absolute;
+  left: 50%;
+  bottom: 2rem;
+  font-size: 1.5rem;
+  transition: all 0.3s linear;
+  animation: float 2s ease-in-out infinite;
+}
+
+/* image part */
+
+#home .image {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#home .image .imgdiv {
+  width: 16rem;
+  border: none;
+  border-radius: 50%;
+  position: relative;
+}
+#home .image .imgdiv img {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#home .image .imgdiv::before {
+  content: "";
+  border: 4px dashed #ff00c8;
+  padding: 55%;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: rotate 20s linear infinite;
+}
+
+/* animation */
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes float {
+  0% {
+    bottom: 3rem;
+  }
+  50% {
+    bottom: 2rem;
+  }
+  100% {
+    bottom: 3rem;
+  }
+}
+
+/* responsive part start */
+
+@media (max-width: 1190px) and (min-width: 761px) {
+
+  #home .content {
+    padding: 0 2rem;
+    gap: 3rem;
+  }
+  #home .content h1 {
+    font-size: 3.2rem;
+  }
+  #home .content p {
+    font-size: 1.5rem;
+  }
+  #home .content .btn button {
+    padding: 0.8rem 1.5rem;
+
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  #home .image .imgdiv {
+    width: 14rem;
+  }
+}
+
+@media (max-width: 840px) and (min-width: 761px) {
+  #home .image .imgdiv {
+    width: 12rem;
+  }
+}
+@media (max-width: 760px) {
+  #home {
+    max-height: 697.5px;
+    padding: 3rem 1rem 0rem 1rem;
+    flex-direction: column-reverse;
+  }
+  #home .content {
+    width: 100%;
+    height: 58%;
+    padding: 0 1.7rem;
+    gap: 1.5rem;
+  }
+  #home .content h1 {
+    font-size: 2.5rem;
+  }
+  #home .content p {
+    font-size: 1.1rem;
+  }
+  #home .content .btn button {
+    padding: 0.6rem 1rem;
+
+    font-size: 0.7rem;
+    font-weight: 500;
+  }
+  #home .content .icon a {
+    font-size: 1.2rem;
+  }
+  #home .content .down {
+    bottom: 1rem;
+    font-size: 1rem;
+  }
+
+  #home .image {
+    padding-top: 1rem;
+    width: 100%;
+    height: 40%;
+  }
+  #home .image .imgdiv {
+    width: 11rem;
+  }
+
+  @keyframes float {
+    0% {
+      bottom: 1.7rem;
+    }
+    50% {
+      bottom: 1rem;
+    }
+    100% {
+      bottom: 1.7rem;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  #home .content {
+    padding: 0;
+  }
+}
+
+/* responsive part end */
