@@ -30,90 +30,87 @@
   background: linear-gradient(to right, #4c4cff, #7149b3);
   border-radius: 10px;
 }
-.subskill .heading p{
-    color: #fff;
-    font-size: 1.5rem;
+.subskill .heading p {
+  color: #fff;
+  font-size: 1.5rem;
 }
 
 .subskill .detailes {
-    width: 90vw;
+  width: 90vw;
   display: grid;
   place-items: center;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   padding-bottom: 3rem;
 }
-.subskill .detailes label{
-    width: 100%;
-    display: grid;
-    padding:10px 20px;
-    border: 1px solid #62357cad;
-    background: #2b243881;
-    border-radius: 10px;
-    color: #ffff;
-    font-size: 1.5rem;
+.subskill .detailes label {
+  width: 100%;
+  display: grid;
+  padding: 10px 20px;
+  border: 1px solid #62357cad;
+  background: #2b243881;
+  border-radius: 10px;
+  color: #ffff;
+  font-size: 1.5rem;
 }
-.subskill .detailes label progress{
-    width: 95%;
+.subskill .detailes label progress {
+  width: 95%;
 }
 
 .subskill .tools {
-    display: grid;
-    place-items: center;
-    gap: 1rem;
+  display: grid;
+  place-items: center;
+  gap: 1rem;
 }
-.subskill .tools h3{
-    font-size: 1.5rem;
-    color: #e2dddd;
+.subskill .tools h3 {
+  font-size: 1.5rem;
+  color: #e2dddd;
 }
-.subskill .tools .span{
-    display: flex;
-    gap: 1rem;
+.subskill .tools .span {
+  display: flex;
+  gap: 1rem;
 }
-.subskill .tools .span span{
-    border: 1px solid #19191a;
-    padding: 8px 15px;
-    background-color: #2a2a2bd7;
-    border-radius: 20px;
-    color: #cfc9cf;
-    font-size: 1rem;
-    font-weight: 500;
+.subskill .tools .span span {
+  border: 1px solid #19191a;
+  padding: 8px 15px;
+  background-color: #2a2a2bd7;
+  border-radius: 20px;
+  color: #cfc9cf;
+  font-size: 1rem;
+  font-weight: 500;
 }
-
 
 /* responsive part start */
 
-@media (min-width:1366px) {
-    .subskill .detailes{
-        width: 1350px;
-        padding: 0rem 2rem 3rem;
-    }
+@media (min-width: 1366px) {
+  .subskill .detailes {
+    width: 1350px;
+    padding: 0rem 2rem 3rem;
+  }
 }
 
-@media (max-width:760px) {
-    .subskill .heading h2{
-        font-size: 8vw ;
-    }
-    .subskill .heading h2 div{
-        padding: 0.2rem 20vw;
-    }
+@media (max-width: 760px) {
+  .subskill .heading h2 {
+    font-size: 8vw;
+  }
+  .subskill .heading h2 div {
+    padding: 0.2rem 20vw;
+  }
 
-    .subskill .heading p{
-        font-size: 1.13rem;
-    }
-    .subskill .detailes{
-        grid-template-columns: 1fr;
-    }
-    .subskill .detailes label{
-        font-size: 1.2rem;
-    }
-
+  .subskill .heading p {
+    font-size: 1.13rem;
+  }
+  .subskill .detailes {
+    grid-template-columns: 1fr;
+  }
+  .subskill .detailes label {
+    font-size: 1.2rem;
+  }
 }
-@media (max-width:360px) {
-    .subskill .tools .span span{
-        font-size: 1rem;
-    }
+@media (max-width: 360px) {
+  .subskill .tools .span span {
+    font-size: 1rem;
+  }
 }
-
 
 /* responsive part end */
