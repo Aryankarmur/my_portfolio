@@ -19,9 +19,10 @@ nav .main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: transparent;
 }
-
+nav .bg{
+   background-color: #272727a6;
+}
 nav .main .logo {
   font-size: 1.3rem;
   background: linear-gradient(to right, #60a5fa, #a855f7);
@@ -89,14 +90,16 @@ nav .none button {
   cursor: pointer;
 }
 
+
+
 /*  ==  start  responsive part ==  */
 
 @media (max-width: 760px) {
   nav .main {
     height: 47px;
-    background-color: #4e49495d;
-    padding-bottom: 0.5rem;
-    padding-top: 0;
+    background-color: #272727a6;
+    padding-bottom: 1rem;
+    padding-top: 0.3rem;
   }
   nav .main .menu {
     display: grid;

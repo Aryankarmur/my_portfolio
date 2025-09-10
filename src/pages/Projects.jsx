@@ -45,8 +45,7 @@ const all_projects = projects.map((project) => {
             <FiGithub />
           </a>
           <a href={project.live_link} target="_blank">
-            {" "}
-            <FiExternalLink />{" "}
+            <FiExternalLink />
           </a>
         </div>
       </div>

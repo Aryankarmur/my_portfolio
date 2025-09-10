@@ -1,12 +1,19 @@
+import { useEffect, useRef, useState } from "react";
 import { IoMenu } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
 
 import "../assets/css/Navbar.css";
-import { useRef, useState } from "react";
 
-const Navbar = () => {
+const Navbar = ({
+  scrolltohome,
+  scrolltoabout,
+  scrolltoskills,
+  scrolltoprojects,
+  scrolltocontect,
+}) => {
   const menu = useRef(null);
   const [close, setClose] = useState(false);
+  const [scroll, setScroll] = useState(false);
 
   const handelmenu = (e) => {
     if (menu.current.classList[0] == "responsivlinks") {
@@ -20,33 +27,45 @@ const Navbar = () => {
     }
   };
 
+  useEffect(() => {
+    const handelScroll = () => {
+      if (window.scrollY > 50) {
+        setScroll(true);
+      } else {
+        setScroll(false);
+      }
+    };
+
+    window.addEventListener("scroll", handelScroll);
+    return () => window.removeEventListener("scroll", handelScroll);
+  }, []);
+
   return (
     <>
       <nav>
-        <div className="main">
+        <div className={`main ${scroll ? "bg" : ""} `}>
           <div className="logo">
             <h1> .Aryan </h1>
           </div>
           <div className="navlinks">
-            
-              <button>Home</button>
-              <button>About</button>
-              <button>Skills</button>
-              <button>Projects</button>
-              <button>Contacts</button>
-            
+            <button onClick={scrolltohome}>Home</button>
+            <button onClick={scrolltoabout}>About</button>
+            <button onClick={scrolltoskills}>Skills</button>
+            <button onClick={scrolltoprojects}>Projects</button>
+            <button onClick={scrolltocontect}>Contacts</button>
           </div>
           <button className="menu" onClick={handelmenu}>
             {close ? <IoClose /> : <IoMenu />}
           </button>
         </div>
         <div className="none" ref={menu}>
-          <button>Home</button>
-          <button>About</button>
-          <button>Skills</button>
-          <button>Projects</button>
-          <button>Contacts</button>
+          <button onClick={scrolltohome}>Home</button>
+          <button onClick={scrolltoabout}>About</button>
+          <button onClick={scrolltoskills}>Skills</button>
+          <button onClick={scrolltoprojects}>Projects</button>
+          <button onClick={scrolltocontect}>Contacts</button>
         </div>
+        
       </nav>
     </>
   );

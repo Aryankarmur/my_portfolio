@@ -4,15 +4,6 @@ import { RxLightningBolt } from "react-icons/rx";
 import "../assets/css/About.css";
 
 const About = () => {
-  const handelrotate = (e) => {
-    e.target.style.transform = "rotate(360deg)";
-    e.target.style.transition = "transform 0.5s ease";
-  };
-
-  const handelleve = (e) => {
-    e.target.style.transform = "rotate(0deg)";
-  };
-
   return (
     <>
       <div id="about-main">
@@ -53,11 +44,7 @@ const About = () => {
           </div>
           <div className="about-cards">
             <div className="card">
-              <div
-                className="icon"
-                onMouseEnter={handelrotate}
-                onMouseLeave={handelleve}
-              >
+              <div className="icon">
                 <IoCode />
               </div>
               <h4>Clean Code</h4>
@@ -67,11 +54,7 @@ const About = () => {
               </p>
             </div>
             <div className="card">
-              <div
-                className="icon"
-                onMouseEnter={handelrotate}
-                onMouseLeave={handelleve}
-              >
+              <div className="icon">
                 <RxLightningBolt />
               </div>
               <h4>Performance</h4>

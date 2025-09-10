@@ -1,5 +1,5 @@
 #skills {
-  padding: 3rem 1rem;
+  padding: 4.65rem 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -43,18 +43,44 @@
   gap: 2rem;
   padding-bottom: 3rem;
 }
-.subskill .detailes label {
+.subskill .detailes .progres-main {
   width: 100%;
   display: grid;
-  padding: 10px 20px;
+  gap: 0.7rem;
+  padding: 15px 20px;
   border: 1px solid #62357cad;
   background: #2b243881;
   border-radius: 10px;
   color: #ffff;
   font-size: 1.5rem;
 }
-.subskill .detailes label progress {
-  width: 95%;
+.subskill .detailes .progres-main .progres-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.subskill .detailes .progres-main .progres-info span:last-child {
+  color: #969595;
+  font-size: 1.2rem;
+}
+.subskill .detailes .progres-main .progres {
+  background-color: #77747483;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+}
+.subskill .detailes .progres-main .progres .sub-progres {
+  padding-block: 0.2px;
+  border: none;
+  border-radius: 10px;
+}
+.subskill .detailes .progres-main .progres .sub-progres .child-progres {
+  border-radius: 50%;
+  height: 12px;
+  width: 12px;
+  position: relative;
+  left: 0.4rem;
+  animation: move 3s linear infinite;
 }
 
 .subskill .tools {
@@ -103,14 +129,32 @@
   .subskill .detailes {
     grid-template-columns: 1fr;
   }
-  .subskill .detailes label {
-    font-size: 1.2rem;
+  .subskill .detailes .progres-main {
+    font-size: 1.1rem;
+  }
+  .subskill .detailes .progres-main .progres-info span:last-child {
+    font-size: 0.87rem;
   }
 }
 @media (max-width: 360px) {
   .subskill .tools .span span {
     font-size: 1rem;
+    font-weight: 400;
   }
 }
 
 /* responsive part end */
+
+/*  animestion  */
+
+@keyframes move {
+  0% {
+    left: 0.4rem;
+  }
+  50% {
+    left: 60%;
+  }
+  100% {
+    left: 0.4rem;
+  }
+}

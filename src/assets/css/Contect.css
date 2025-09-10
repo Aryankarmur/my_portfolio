@@ -1,0 +1,208 @@
+#contect {
+  padding: 4.65rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right bottom, #1a215a, #4a1270, #5b0794);
+}
+
+#contect .subcontect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.subcontect .contect-heading {
+  display: grid;
+  place-items: center;
+  gap: 1.4rem;
+  padding-bottom: 2.5rem;
+}
+.subcontect .contect-heading h2 {
+  color: #577cf5;
+  font-size: 3.5rem;
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+}
+.subcontect .contect-heading h2 div {
+  padding: 0.2rem 6rem;
+  background: linear-gradient(to right, #4c4cff, #7149b3);
+  border-radius: 10px;
+}
+.subcontect .contect-heading p {
+  padding-inline: 10px;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.subcontect .contect-detail {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  gap: 2.3rem;
+  padding: 3rem 0.5rem;
+  border-bottom: 1px solid #757575;
+}
+.subcontect .contect-detail h3 {
+  width: 80%;
+  color: #fff;
+  font-size: 2rem;
+}
+.subcontect .contect-detail .connect {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.subcontect .contect-detail .connect .mainconnect {
+  width: 25rem;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 2rem;
+  border: 1px solid #535353;
+  border-radius: 10px;
+  background-color: #31313160;
+  cursor: pointer;
+}
+.subcontect .contect-detail .connect .mainconnect .image {
+  color: #fff;
+  border: none;
+  width: 3.4rem;
+  height: 3.4rem;
+  display: grid;
+  place-items: center;
+  border-radius: 15px;
+  background: linear-gradient(to right, #345ad4, #9b23d3);
+  font-size: 1.6rem;
+  transition: all 0.5s linear;
+}
+.subcontect .contect-detail .connect .mainconnect .image:hover {
+  rotate: 360deg;
+}
+.subcontect .contect-detail .connect .mainconnect .info p {
+  color: #aaa9a9;
+}
+.subcontect .contect-detail .connect .mainconnect .info a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.subcontect footer {
+  width: 70%;
+  padding-top: 2rem;
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+  color: #cecece;
+}
+.subcontect footer .subfooter {
+  width: 100%;
+  padding-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #757575;
+}
+.subcontect footer .subfooter .links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.4rem;
+}
+.subcontect footer .subfooter .links a {
+  text-decoration: none;
+  color: #cecece;
+}
+.subcontect footer .subfooter .details p:first-child {
+  background: linear-gradient(to right, #5543ff, #fa3dea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.subcontect footer .subfooter .details p:last-child {
+  font-size: 1.5rem;
+}
+.subcontect footer .copyright {
+  font-size: 1.1rem;
+}
+
+/* responsive part start */
+
+@media (min-width: 1366px) {
+  .subcontect {
+    width: 1366px;
+  }
+}
+
+@media (max-width: 880px) {
+  .subcontect .contect-detail .connect .mainconnect {
+    width: 22rem;
+  }
+   .subcontect .contect-detail .connect .mainconnect .image {
+    width: 3.5rem;
+    height: 3rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .subcontect .contect-heading h2 {
+    font-size: 8vw;
+  }
+  .subcontect .contect-heading h2 div {
+    padding: 0.2rem 10vw;
+  }
+  .subcontect .contect-heading p {
+    font-size: 1.1rem;
+  }
+  .subcontect .contect-detail .connect {
+    grid-template-columns: 1fr;
+  }
+  .subcontect .contect-detail h3 {
+    width: 97%;
+  }
+  .subcontect footer {
+    width: 85%;
+  }
+  .subcontect footer .subfooter {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .subcontect .contect-detail .connect .mainconnect {
+    width: 100%;
+  }
+  .subcontect footer .subfooter {
+    align-items: start;
+  }
+  .subcontect footer .subfooter .details p:first-child {
+    width: 95%;
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+  .subcontect footer .subfooter .details p:last-child {
+    font-size: 1.2rem;
+  }
+  .subcontect footer .copyright {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 340px) {
+  .subcontect .contect-detail .connect .mainconnect .image {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .subcontect .contect-detail .connect .mainconnect .info p {
+    font-size: 0.9rem;
+  }
+  .subcontect .contect-detail .connect .mainconnect .info a {
+    font-size: 0.8rem;
+  }
+}
+
+/* responsive part end */

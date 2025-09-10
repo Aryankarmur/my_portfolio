@@ -5,6 +5,7 @@
   background: linear-gradient(to right, #552c77, #483068, #532466);
 }
 #about {
+  padding-top: 4rem;
   display: grid;
   place-items: center;
   gap: 5rem;
@@ -136,10 +137,12 @@
   display: grid;
   place-items: center;
   border-radius: 15px;
-  background: linear-gradient(to right, #345ad4,#9b23d3);
-}
-#about .about-cards .card .icon svg{
   font-size: 2rem;
+  background: linear-gradient(to right, #345ad4,#9b23d3);
+  transition: all 0.5s ease;
+}
+#about .about-cards .card .icon:hover {
+  rotate: 360deg;
 }
 
 #about .about-cards .card h4{

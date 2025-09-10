@@ -2,11 +2,28 @@ import { FiGithub } from "react-icons/fi";
 import { SlSocialLinkedin } from "react-icons/sl";
 import { MdMailOutline } from "react-icons/md";
 import { FaChevronDown } from "react-icons/fa";
+import { FaArrowUp } from "react-icons/fa6";
 import coder from "../assets/images/Programmer.avif";
 import "../assets/css/Home.css";
 import resume from "../assets/resume/Aryan_Resume.pdf";
+import { useEffect, useState } from "react";
 
-const Home = () => {
+const Home = ({ scrolltoprojects, scrolltohome }) => {
+  const [uparrow, setUparrow]=useState(false);
+useEffect(()=>{
+
+   const handelarrow = () => {
+      if (window.scrollY > 50) {
+        setUparrow(true);
+      } else {
+        setUparrow(false);
+      }
+    };
+
+    window.addEventListener("scroll", handelarrow);
+    return () => window.removeEventListener("scroll", handelarrow);
+},[])
+
   return (
     <>
       <div id="home-main">
@@ -20,7 +37,9 @@ const Home = () => {
               interactive web applications.
             </p>
             <div className="btn">
-              <button className="btn1">View My Work</button>
+              <button className="btn1" onClick={scrolltoprojects}>
+                View My Work
+              </button>
               <a href={resume} target="_blank">
                 <button className="btn2"> Download CV </button>
               </a>
@@ -45,8 +64,15 @@ const Home = () => {
           </div>
           <div className="image">
             <div className="imgdiv">
-              <img src={coder} alt="" />
+              <img src={coder} alt="coder image" />
             </div>
+          </div>
+          <div className={ `uparrow  ${uparrow ? "none" : ""}`} onClick={scrolltohome}>
+            <div>
+
+              <FaArrowUp/>
+            </div>
+            
           </div>
         </div>
       </div>

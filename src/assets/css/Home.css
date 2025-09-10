@@ -129,6 +129,34 @@
   animation: rotate 20s linear infinite;
 }
 
+
+#home .uparrow{
+  width: 50px;
+  height: 50px;
+  display: none;
+  place-items: center;
+  position: fixed;
+  right: 50px;
+  bottom: 40px;
+  border: none;
+  color: #ffffff;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  background: linear-gradient(to right, #6747f5,#982edf);
+  /* transition: all .5s linear; */
+  cursor: pointer;
+  z-index: 200;
+}
+#home .none{
+  display: grid;
+}
+
+#home .uparrow div{
+  position: relative;
+  animation: updown 2.5s linear infinite;
+
+}
+
 /* animation */
 @keyframes rotate {
   0% {
@@ -150,6 +178,20 @@
     bottom: 3rem;
   }
 }
+@keyframes updown {
+  0% {
+    bottom: 5px;
+  }
+  50% {
+    bottom: -5px;
+  }
+  100% {
+    bottom: 5px;
+  }
+}
+
+
+
 
 /* responsive part start */
 
