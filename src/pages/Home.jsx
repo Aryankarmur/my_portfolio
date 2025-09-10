@@ -3,7 +3,7 @@ import { SlSocialLinkedin } from "react-icons/sl";
 import { MdMailOutline } from "react-icons/md";
 import { FaChevronDown } from "react-icons/fa";
 import { FaArrowUp } from "react-icons/fa6";
-import coder from "../assets/images/Programmer.avif";
+import coder from "../assets/images/programmer.avif";
 import "../assets/css/Home.css";
 import resume from "../assets/resume/Aryan_Resume.pdf";
 import { useEffect, useState } from "react";
